@@ -1,0 +1,586 @@
+@font-face {
+  font-family: "Appetite", sans-serif;
+  src: url("/fonts/AppetiteNewRegular.ttf") format("truetype");
+}
+body {
+  background-color: #0c1417;
+  color: white;
+  font-family: "montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+body,
+html {
+  height: 100%;
+  min-height: 100%;
+}
+.container {
+  position: relative;
+  padding: 0 50px;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+.panteon {
+  height: 100%;
+  min-height: 100vh;
+
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.1) 100%,
+      rgba(0, 0, 0, 0.4) 100%
+    ),
+    url("./images/back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.panteon::after {
+  content: "";
+  background-image: url("./images/to.svg");
+  position: absolute;
+  top: 0;
+  right: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 180px;
+  height: 140px;
+}
+.panteon::before {
+  z-index: 8;
+  content: "";
+  background-image: url("./images/tw.svg");
+  position: absolute;
+  top: 0;
+  right: 246px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 168px;
+  height: 107px;
+}
+.panteon2::after {
+  content: "";
+  background-image: url(./images/lw.svg);
+  position: absolute;
+  top: 717px;
+  left: 0px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 142px;
+  height: 204px;
+}
+.header__btn{
+  width: 25px;
+  height:  25px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("./images/burger.svg");
+ }
+ .header__btn.active{
+  width: 25px;
+  height: 25px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./images/active.svg);
+  padding-bottom: 25px !important;
+}
+.panteon2::before {
+  content: "";
+  background-image: url(./images/lb.svg);
+  position: absolute;
+  top: 602px;
+  left: 0px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 275px;
+  height: 368px;
+}
+.panteon3::before {
+  content: "";
+  background-image: url(./images/lo.svg);
+  position: absolute;
+  top: 498px;
+  left: -17px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 225px;
+  height: 289px;
+}
+
+.header {
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.header__inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.header__navbar {
+  margin-right: 190px;
+}
+.header__navbar-item {
+  z-index: 10;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.header__phone {
+  z-index: 10;
+}
+.header__navbar-item:hover {
+  color: #f7931e !important;
+}
+.header__navbar,
+.header__phone {
+  margin-top: 42px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo-link {
+  min-width: 230px;
+  min-height: 103px;
+  z-index: 10;
+  cursor: pointer;
+}
+.panteon__inner {
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.panteon__title {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 68px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 35px;
+}
+.panteon__subtitle {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.panteon__arrow {
+  padding: 5px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  bottom: 48px;
+}
+
+.panteon__vk-link {
+  padding: 5px;
+  position: absolute;
+  right: 50px;
+  bottom: 48px;
+}
+
+.panteon__inst-link {
+  padding: 5px;
+  position: absolute;
+  right: 95px;
+  bottom: 48px;
+}
+.panteon__consultation {
+  position: relative;
+  z-index: 10;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.panteon__consultation-wrapper {
+  cursor: pointer;
+  width: 280px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: top 0.9s ease;
+}
+.panteon__consultation-wrapper:hover::after {
+  top: 0;
+  left: 0;
+}
+.panteon__consultation-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 60px;
+  top: 8px;
+  left: -10px;
+
+  background-image: url("./images/co.svg");
+}
+.panteon__consultation-wrapper::before {
+  z-index: 10;
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 60px;
+  top: 0;
+  left: 0;
+  background-image: url("./images/cw.svg");
+}
+.new-btn::after {
+  z-index: 10;
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 60px;
+  top: 0;
+  left: 0;
+  background-image: none;
+}
+
+@media (max-width: 768px) {
+  .panteon__title {
+    padding: 0 20px;
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 68px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+}
+@media (max-width: 1200px) {
+  .header__navbar {
+    padding: 0 15px;
+    max-width: 610px;
+    position: absolute;
+    top: 122px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+  }
+  .panteon::after {
+    content: "";
+    background-image: url("./images/tw.svg");
+    position: absolute;
+    top: -16px;
+    right: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 168px;
+    height: 108px;
+  }
+  .panteon::before {
+    z-index: 8;
+    content: "";
+    background-image: url("./images/to.svg");
+    position: absolute;
+    top: 0;
+    right: 210px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 168px;
+    height: 131px;
+  }
+}
+.header__btn {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.phone {
+  display: none;
+}
+
+.new {
+  padding-top: 100px;
+
+  padding-bottom: 125px;
+}
+.new__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.new__left {
+  display: flex;
+  gap: 30px;
+}
+.new__left-first {
+  margin-bottom: 40px;
+}
+.new__left-second {
+  margin-top: 40px;
+}
+.new__top-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 76px;
+}
+.new__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.new__right {
+  max-width: 450px;
+  width: 100%;
+}
+.new__right-text {
+  margin-bottom: 40px;
+}
+.new__right-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 50px;
+}
+.new__item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  position: relative;
+}
+.new__item.active::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: -26px;
+  left: 0;
+  border-bottom: 2px solid #f7931e;
+}
+@media (max-width: 768px) {
+  .panteon::after {
+    width: 145px;
+    height: 94px;
+  }
+  .panteon::before {
+    width: 151px;
+    height: 100px;
+  }
+
+  .panteon.active::before,
+  .panteon.active::after {
+    filter: blur(8px);
+    z-index: 0;
+  }
+  .container {
+    padding: 0 15px;
+  }
+  .header__btn {
+    z-index: 20;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+
+    position: absolute;
+    cursor: pointer;
+    top: 56px !important;
+    right: 15px;
+  }
+  .phone {
+    display: block;
+  }
+  .header.active {
+    padding-bottom: 130px;
+    z-index: 1;
+    background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.85) 0%,
+      rgba(0, 0, 0, 0.8075) 100%
+    );
+  }
+  .header__navbar {
+    display: none;
+  }
+  .header__navbar-item {
+    text-align: center;
+    flex-basis: 46%;
+    z-index: 10;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .header__navbar-item a {
+    flex-wrap: nowrap;
+  }
+
+  .header__phone {
+    display: none !important;
+  }
+  .header__inner.active > * {
+    top: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1;
+    gap: 15px;
+    padding-bottom: 30px;
+  }
+
+  .trener {
+    order: -3;
+  }
+  .about {
+    order: -2;
+  }
+  .contacts {
+    order: -1;
+  }
+
+  .panteon__title {
+    white-space: wrap;
+  }
+  .panteon2::after {
+    scale: 0.8;
+    top: 750px;
+    left: -15px;
+
+    width: 142px;
+    height: 204px;
+  }
+  .panteon2::before {
+    scale: 0.8;
+
+    top: 602px;
+    left: -29px;
+
+    width: 275px;
+    height: 410px;
+  }
+  .panteon3::before {
+    scale: 0.8;
+    top: 572px;
+    left: -37px;
+    width: 225px;
+    height: 241px;
+  }
+}
+@media (max-width: 1280px) {
+  .new__right {
+    margin: 0 auto;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    order: -1;
+    max-width: 740px;
+  }
+  .new__left {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .new__right-title {
+    text-align: center;
+  }
+  .new-btn {
+    margin: 0 auto;
+  }
+  .new__top-content {
+    justify-content: center;
+  }
+  .new__left-first {
+    margin-bottom: 0;
+  }
+  .new__left-second {
+    margin-top: 0;
+  }
+  .new__top-content {
+    gap: 60px;
+  }
+  .new__list {
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  .new__item {
+    justify-content: space-between;
+    flex-direction: column;
+    flex: 1 1 46%;
+  }
+  .new__item-text {
+    text-align: center;
+    max-width: 210px;
+  }
+}
+
+@media (max-width: 420px) {
+  .panteon2::after {
+    scale: 0.6;
+    top: 765px;
+    left: -29px;
+    width: 142px;
+    height: 204px;
+  }
+  .panteon2::before {
+    scale: 0.6;
+    top: 637px;
+    left: -63px;
+    width: 317px;
+    height: 416px;
+  }
+  .panteon3::before {
+    scale: 0.6;
+    top: 619px;
+    left: -56px;
+    width: 225px;
+    height: 241px;
+  }
+  .new__top-content {
+    gap: 40px;
+  }
+  .new__right-text {
+    text-align: left;
+  }
+  .new__right-title {
+    font-size: 25px;
+    margin-bottom: 60px;
+    margin-top: 20px;
+  }
+}
